@@ -1,0 +1,22 @@
+<ion-view view-title="User">
+  <ion-content>
+    <h1>users list</h1>
+      Vous pouvez ajoute un utilisateur <a href="#/app/userAdd"> ici</a><br/>{{users.version}}
+      <div class="list" ><br/> {{users.length}}
+          <div class="item item-divider" ng-repeat ="usr in users | orderBy :'name'">
+             <p>Numero Id : {{usr.id}}</p>
+              <p>Nom : {{usr.name}}</p>
+              <p>Reference : {{usr.numeroRef}}</p>
+              <p>Prix : {{usr.prix}}</p>
+              <p>Quantité : {{usr.qte}} </p>
+              
+              <div class="col-xs-8">
+                  <a class="button button-small button-outline button-calm "  ng-click="updateThis()">Update</a>
+                  <a class="button button-small button-outline button-assertive"  ng-click="delThis()">Delete</a>
+              </div>
+              
+          </div>
+          
+        </div>
+  </ion-content>
+</ion-view>
